@@ -10,10 +10,10 @@
 
 ## logic planning
 
-function getRandomThrow()
+function getRandomThrow() use if/else if statement
 - must generate a random number and output a rock, paper or scissors.
 
-function didUserWin(player, computer)
+function doesUserWin(player, computer) Will use concatenated string as an array input and pass to inInArray() to find element then call output array element.
 - input is user's choice and computer generation, output is win, lose, draw
 - need to test the nine possible outcomes
 - assume valid input(rock, paper, scissors)
