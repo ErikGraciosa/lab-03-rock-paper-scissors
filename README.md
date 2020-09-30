@@ -9,16 +9,18 @@
 
 
 ## logic planning
+
 function getRandomThrow()
-    - must generate a random number and output a rock, paper or scissors.
+- must generate a random number and output a rock, paper or scissors.
+
 function didUserWin(player, computer)
-    -input is user's choice and computer generation, output is win, lose, draw
-    -need to test the nine possible outcomes
-    -assume valid input(rock, paper, scissors)
+- input is user's choice and computer generation, output is win, lose, draw
+- need to test the nine possible outcomes
+- assume valid input(rock, paper, scissors)
 
 the game will play when the button is clicked
-    -displays result (win/lose/draw)
-    -and counts wins/losses/draws
+- displays result (win/lose/draw)
+- and counts wins/losses/draws
 
 stretch: reset button
 stretch: keep track of and display how many times the reset button was hit

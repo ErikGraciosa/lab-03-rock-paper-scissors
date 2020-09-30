@@ -51,6 +51,12 @@ section {
     border: solid 2px var(--color1);
 }
 
+.content-wide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -88,6 +94,9 @@ header img {
 
 content {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 p {
