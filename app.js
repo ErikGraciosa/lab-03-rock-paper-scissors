@@ -24,20 +24,21 @@ const userCompString = ['rockrock',
     'scissorspaper',
     'scissorsscissors'];
 
-const userCompOutcomes = ['draw',
-    'lose',
-    'win',
-    'win',
-    'draw',
-    'lose',
-    'lose',
-    'win',
-    'draw'];
+const userCompOutcomes = ['DRAW',
+    'LOSE',
+    'WIN',
+    'WIN',
+    'DRAW',
+    'LOSE',
+    'LOSE',
+    'WIN',
+    'DRAW'];
 
 // set event listeners to update state and DOM
 wins.textContent = 0;
 losses.textContent = 0;
 draws.textContent = 0;
+numberOfResets.textContent = 0;
 
 //Function for computer selection, no args, outputs rock, paper, scissors.
 function getRandomThrow() {
@@ -65,19 +66,17 @@ function doesUserWin(player, computer) {
 shootButton.addEventListener('click', () => {
     //Get value of radio button selected
     const checkedRadioButton = document.querySelector(':checked');
-    const userSelection = checkedRadioButton.value;
-    console.log('User selected' + userSelection);
+    const userSelection = checkedRadioButton.value;    
     
     //Generate random computer selection
-    const compSelection = getRandomThrow();
-    console.log('Comp selected' + compSelection);
+    const compSelection = getRandomThrow();    
 
     //Compare
     const outcome = doesUserWin(userSelection, compSelection);
 
-    //Update states, pictures, increment counters
-    console.log(outcome);
+    //Update states, pictures, increment counters    
     toggleWinnerLoser.textContent = outcome;
+    toggleWinnerLoser.style.display = 'block';
     if (outcome === (userCompOutcomes[2] || userCompOutcomes[3] || userCompOutcomes[7])) {
         wins.textContent++;
     } else if (outcome === (userCompOutcomes[1] || userCompOutcomes[5] || userCompOutcomes [6])) {
@@ -106,8 +105,11 @@ shootButton.addEventListener('click', () => {
 });
 
 // Hooks for reset button
-// resetButton.addEventListener('click', () => {
-
-// });
+resetButton.addEventListener('click', () => {
+    wins.textContent = 0;    
+    losses.textContent = 0;
+    draws.textContent = 0;
+    numberOfResets.textContent++;
+});
 
 

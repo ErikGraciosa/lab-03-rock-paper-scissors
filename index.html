@@ -33,7 +33,7 @@
                             <li>Wins: <span id="wins"></span></li>
                             <li>Losses: <span id="losses"></span></li>
                             <li>Draws: <span id="draws"></span></li>
-                            <!-- <li>Resets: <span id="resets"></span></li> -->
+                            <li>Resets: <span id="resets"></span></li>
                             <button id="reset">Reset History</button>
                     </article>
                 </div>
@@ -43,7 +43,8 @@
                             
                             type="radio" 
                             name="select-rps" 
-                            value="rock" /> 
+                            value="rock"
+                            checked /> 
                             <img class="resized200200" src="./assets/rock.jpeg">
                     </label>
                     <label>
@@ -63,15 +64,17 @@
                             <img class="resized200200" src="./assets/scissors.jpg">
                     </label>
                 </div>
-                <button id="shoot">SHOOT</button>
+                <div class="content-wide">
+                    <button id="shoot">SHOOT</button>
+                </div>                
                 <div class="content-wide">
                     <figure>
                         <img id="user-pick-image" src="https://www.placecage.com/300/300/">
                         <figcaption>You</figcaption>
                     </figure>
                     <div class="matchup">
-                        <div id="toggle-winner-loser">WINNER/LOSER</div>
-                        <div>VS</div>
+                        <div id="toggle-winner-loser"></div>
+                        <div id="vs">VS</div>
                     </div>
                     <figure>
                         <img id="comp-pick-image" src="http://www.placekitten.com/300/300/">
