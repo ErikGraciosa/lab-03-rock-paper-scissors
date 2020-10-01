@@ -14,34 +14,73 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
+        Welcome to Rock Paper Scissors.
+        
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
+        <section class="main-section">         
             <content>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-
+                <div class="content-wide">
+                    <article>
+                        <ul>Rules List</ul>
+                            <li>R > S</li>
+                            <li>S > P</li>
+                            <li>P > R</li>
+                            <li>Same = Draw</li>
+                    </article>
+                    <article>
+                        <ul>History List</ul>
+                            <li>Wins: <span id="wins"></span></li>
+                            <li>Losses: <span id="losses"></span></li>
+                            <li>Draws: <span id="draws"></span></li>
+                            <li>Resets: <span id="resets"></span></li>
+                            <button id="reset">Reset History</button>
+                    </article>
+                </div>
+                <div class="content-wide">
+                    <label>
+                        <input 
+                            
+                            type="radio" 
+                            name="select-rps" 
+                            value="rock"
+                            checked /> 
+                            <img class="resized200200" src="./assets/rock.jpeg">
+                    </label>
+                    <label>
+                        <input 
+                            
+                            type="radio" 
+                            name="select-rps" 
+                            value="paper" /> 
+                            <img class="resized200200" src="./assets/paper.jpeg">
+                    </label>
+                    <label>
+                        <input 
+                            
+                            type="radio" 
+                            name="select-rps" 
+                            value="scissors" /> 
+                            <img class="resized200200" src="./assets/scissors.jpg">
+                    </label>
+                </div>
+                <div class="content-wide">
+                    <button id="shoot">SHOOT</button>
+                </div>                
+                <div class="content-wide">
+                    <figure>
+                        <img id="user-pick-image" src="https://www.placecage.com/300/300/">
+                        <figcaption>You</figcaption>
+                    </figure>
+                    <div class="matchup">
+                        <div id="toggle-winner-loser"></div>
+                        <div id="vs">VS</div>
+                    </div>
+                    <figure>
+                        <img id="comp-pick-image" src="http://www.placekitten.com/300/300/">
+                        <figcaption>Computer</figcaption>
+                    </figure>
+                </div>
         </section>
     </main>
     <footer>
