@@ -35,7 +35,9 @@ const userCompOutcomes = ['draw',
     'draw'];
 
 // set event listeners to update state and DOM
-
+wins.textContent = 0;
+losses.textContent = 0;
+draws.textContent = 0;
 
 //Function for computer selection, no args, outputs rock, paper, scissors.
 function getRandomThrow() {
@@ -76,6 +78,13 @@ shootButton.addEventListener('click', () => {
     //Update states, pictures, increment counters
     console.log(outcome);
     toggleWinnerLoser.textContent = outcome;
+    if (outcome === (userCompOutcomes[2] || userCompOutcomes[3] || userCompOutcomes[7])) {
+        wins.textContent++;
+    } else if (outcome === (userCompOutcomes[1] || userCompOutcomes[5] || userCompOutcomes [6])) {
+        losses.textContent++;
+    } else if (outcome === (userCompOutcomes[0] || userCompOutcomes[4] || userCompOutcomes[8])) {
+        draws.textContent++;
+    }
 
     //Update user picture
     if (userSelection === 'rock') {
