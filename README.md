@@ -13,7 +13,7 @@
 function getRandomThrow() use if/else if statement
 - must generate a random number and output a rock, paper or scissors.
 
-function doesUserWin(player, computer) Will use concatenated string as an array input and pass to inInArray() to find element then call output array element.
+function doesUserWin(player, computer) Will use concatenated string as an array input and pass to array.indexOf('string', array) to output element index then call output array element with result.
 - input is user's choice and computer generation, output is win, lose, draw
 - need to test the nine possible outcomes
 - assume valid input(rock, paper, scissors)

@@ -57,9 +57,25 @@ section {
     justify-content: space-around;
 }
 
+.resized200200 {
+    width: 200px;
+    height: 200px;
+}
+
+#user-pick-image, #comp-pick-image {
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+/* Hooks for reset button */
+#reset {
+    display: none;
+}
+
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
