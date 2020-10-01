@@ -35,10 +35,7 @@ export function doesUserWin(player, computer) {
     'DRAW'];
      
     const combinedString = player + computer;
-    console.log(combinedString, userCompString)
     const scenarioPosition = userCompString.indexOf(combinedString, userCompString);
-    console.log(userCompString.indexOf(combinedString, userCompString));
-    console.log(typeof scenarioPosition)
     return [userCompOutcomes[scenarioPosition], userCompOutcomes, scenarioPosition];
     
 }

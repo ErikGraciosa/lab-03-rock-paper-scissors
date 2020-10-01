@@ -25,11 +25,9 @@ shootButton.addEventListener('click', () => {
     
     //Generate random computer selection
     const compSelection = getRandomThrow();    
-    console.log(userSelection, compSelection)
     //Compare
     const outcome = doesUserWin(userSelection, compSelection);
-    console.log(outcome);
-
+    
     //Update states, pictures, increment counters    
     toggleWinnerLoser.textContent = outcome[0];
     toggleWinnerLoser.style.display = 'block';
