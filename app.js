@@ -1,10 +1,9 @@
-// import functions and grab DOM elements
-//Spans
+import { getRandomThrow, doesUserWin} from './functions.js';
+
 const wins = document.getElementById('wins');
 const losses = document.getElementById('losses');
 const draws = document.getElementById('draws');
 
-//Buttons
 const shootButton = document.getElementById('shoot');
 const resetButton = document.getElementById('reset');
 
@@ -13,54 +12,10 @@ const compPickImage = document.getElementById('comp-pick-image');
 const toggleWinnerLoser = document.getElementById('toggle-winner-loser');
 const numberOfResets = document.getElementById('resets');
 
-// initialize state
-const userCompString = ['rockrock',
-    'rockpaper',
-    'rockscissors',
-    'paperrock',
-    'paperpaper',
-    'paperscissors',
-    'scissorsrock',
-    'scissorspaper',
-    'scissorsscissors'];
-
-const userCompOutcomes = ['DRAW',
-    'LOSE',
-    'WIN',
-    'WIN',
-    'DRAW',
-    'LOSE',
-    'LOSE',
-    'WIN',
-    'DRAW'];
-
-// set event listeners to update state and DOM
 wins.textContent = 0;
 losses.textContent = 0;
 draws.textContent = 0;
 numberOfResets.textContent = 0;
-
-//Function for computer selection, no args, outputs rock, paper, scissors.
-function getRandomThrow() {
-    const randomNumber = Math.random() * 3;
-    if (randomNumber > 0 && randomNumber <= 1 ) {
-        return 'rock';
-    } else if (randomNumber > 1 && randomNumber <=2) {
-        return 'paper';
-    } else if (randomNumber > 2 && randomNumber <=3) {
-        return 'scissors';
-    } else {
-        console.log(randomNumber);
-        getRandomThrow(); //This is the case that zero was generated
-    }
-}
-
-//Comparison function
-function doesUserWin(player, computer) {
-    const combinedString = player + computer;
-    const scenarioPosition = userCompString.indexOf(combinedString, userCompString);
-    return userCompOutcomes[scenarioPosition];
-}
 
 //Get this in click event listener
 shootButton.addEventListener('click', () => {
@@ -70,18 +25,19 @@ shootButton.addEventListener('click', () => {
     
     //Generate random computer selection
     const compSelection = getRandomThrow();    
-
+    console.log(userSelection, compSelection)
     //Compare
     const outcome = doesUserWin(userSelection, compSelection);
+    console.log(outcome);
 
     //Update states, pictures, increment counters    
-    toggleWinnerLoser.textContent = outcome;
+    toggleWinnerLoser.textContent = outcome[0];
     toggleWinnerLoser.style.display = 'block';
-    if (outcome === (userCompOutcomes[2] || userCompOutcomes[3] || userCompOutcomes[7])) {
+    if (outcome[0] === (outcome[1][2] || outcome[1][3] || outcome[1][7])) {
         wins.textContent++;
-    } else if (outcome === (userCompOutcomes[1] || userCompOutcomes[5] || userCompOutcomes [6])) {
+    } else if (outcome[0] === (outcome[1][1] || outcome[1][5] || outcome[1][6])) {
         losses.textContent++;
-    } else if (outcome === (userCompOutcomes[0] || userCompOutcomes[4] || userCompOutcomes[8])) {
+    } else if (outcome[0] === (outcome[1][0] || outcome[1][4] || outcome[1][8])) {
         draws.textContent++;
     }
 
