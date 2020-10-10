@@ -67,6 +67,11 @@ article {
     width: 30%;
 }
 
+img {
+    border: solid white 10px;
+    border-radius: 20px;
+}
+
 #toggle-winner-loser {
     background-color: #F24236;
     font-weight: 800;
@@ -77,6 +82,12 @@ article {
 ul {
     text-align: center;
     font-weight: 700;
+}
+
+label {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
 }
 
 .content-wide {
