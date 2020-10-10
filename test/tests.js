@@ -1,7 +1,7 @@
 
 
 // IMPORT MODULES under test here:
-import { example } from '../app.js';
+import { getRandomThrow, doesUserWin } from '../functions.js';
 
 const test = QUnit.test;
 
@@ -15,22 +15,6 @@ test('Test getRandomThrow by confirming output datatype, expected to be "string"
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = typeof(getRandomThrow());
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(expected, actual);
-});
-
-//testing user win section
-test('time to test a function', (expect) => {
-    //Arrange
-    //checking data type
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = false;
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -86,13 +70,13 @@ test('test doesUserWin(player, computer) input and outputs align with game rules
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(expected1, actual1);
-    expect.equal(expected2, actual2);
-    expect.equal(expected3, actual3);
-    expect.equal(expected4, actual4);
-    expect.equal(expected5, actual5);
-    expect.equal(expected6, actual6);
-    expect.equal(expected7, actual7);
-    expect.equal(expected8, actual8);
-    expect.equal(expected9, actual9);
+    expect.equal(actual1, expected1);
+    expect.equal(actual2, expected2);
+    expect.equal(actual3, expected3);
+    expect.equal(actual4, expected4);
+    expect.equal(actual5, expected5);
+    expect.equal(actual6, expected6);
+    expect.equal(actual7, expected7);
+    expect.equal(actual8, expected8);
+    expect.equal(actual9, expected9);
 });
