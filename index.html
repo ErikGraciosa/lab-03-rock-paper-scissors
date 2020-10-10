@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
@@ -39,8 +39,7 @@
                 </div>
                 <div class="content-wide">
                     <label>
-                        <input 
-                            
+                        <input                             
                             type="radio" 
                             name="select-rps" 
                             value="rock"
@@ -48,16 +47,14 @@
                             <img id="rock" class="resized200200" src="./assets/rock.jpeg">
                     </label>
                     <label>
-                        <input 
-                            
+                        <input                             
                             type="radio" 
                             name="select-rps" 
                             value="paper" /> 
                             <img id="paper" class="resized200200" src="./assets/paper.jpeg">
                     </label>
-                    <label >
-                        <input 
-                            
+                    <label>
+                        <input                        
                             type="radio" 
                             name="select-rps" 
                             value="scissors" /> 
@@ -65,12 +62,12 @@
                     </label>
                 </div>
                 <div class="content-wide">
-                    <button id="shoot">SHOOT</button>
+                    <button id="shoot">3...2...1...</button>
                 </div>                
                 <div class="content-wide">
                     <figure>
                         <img id="user-pick-image" src="">
-                        <figcaption>You</figcaption>
+                        <figcaption id="caption-you">You</figcaption>
                     </figure>
                     <div class="matchup">
                         <div id="toggle-winner-loser"></div>
@@ -78,7 +75,7 @@
                     </div>
                     <figure>
                         <img id="comp-pick-image" src="">
-                        <figcaption>Computer</figcaption>
+                        <figcaption id="caption-computer">Computer</figcaption>
                     </figure>
                 </div>
         </section>

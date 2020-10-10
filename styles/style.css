@@ -41,15 +41,21 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px black;
 }
 
 article, label, figure, #vs {
     background-color: #F6F5AE;
+    box-shadow: 5px 10px 8px black;
+    border-radius: 20px;
 }
 
 article {
-    padding: 5px;
+    padding: 10px;
+    border-radius: 20px;
 }
+
 #vs {
     text-align: center;
     font-weight: 900;
@@ -59,12 +65,14 @@ article {
 #shoot {
     margin: 5px;
     font-weight: 700;
+    font-size: 20pt;
     color: white;
     background-color: var(--color1);
     border-color: var(--color6);
-    border: solid var(--color6) 3px;
-    border-radius: 2px;
+    border: solid var(--color6) 5px;
+    border-radius: 10px;
     width: 30%;
+    padding: 10px;
 }
 
 img {
@@ -72,11 +80,25 @@ img {
     border-radius: 20px;
 }
 
+#rock {
+    border-color: #F24236;
+}
+
 #toggle-winner-loser {
     background-color: #F24236;
     font-weight: 800;
     font-size: 20pt;
     display: none;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 5px 10px 8px black;
+    width: 100px;
+    text-align: center;
+}
+
+#caption-computer, #caption-you, #vs {
+    display: none;
+    border-radius: 20px;
 }
 
 ul {
@@ -105,6 +127,7 @@ label {
 figcaption {
     text-align: center;
     font-weight: 700;
+    
 }
 
 #user-pick-image, #comp-pick-image {
