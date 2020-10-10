@@ -6,6 +6,9 @@ const wins = document.getElementById('wins');
 const losses = document.getElementById('losses');
 const draws = document.getElementById('draws');
 const numberOfResets = document.getElementById('resets');
+const captionComputer = document.getElementById('caption-computer');
+const captionYou = document.getElementById('caption-you');
+const vs = document.getElementById('vs');
 
 wins.textContent = 0;
 losses.textContent = 0;
@@ -63,6 +66,11 @@ export function doesUserWin(player, computer) {
     } else if (userCompOutcomes[scenarioPosition] === 'DRAW') {
         draws.textContent++;
     }
+
+    //Display matchup 
+    vs.style.display = 'block';
+    captionComputer.style.display = 'block';
+    captionYou.style.display = 'block';
 
     //Update user picture
     if (player === 'rock') {
